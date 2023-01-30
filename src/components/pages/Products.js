@@ -3,6 +3,7 @@ import '../../App.css';
 
 export default function About() {
   return (
+    <div className=''>
     <div className='about-container'>
       <h1 className='about-title'>About Our Library</h1>
       <p className='about-description'>
@@ -42,6 +43,7 @@ export default function About() {
           Instagram: <a href='https://www.instagram.com/readtopialib/' className='about-link'>@readtopialib</a>
         </p>
       </div>
+    </div>
     </div>
   );
 }

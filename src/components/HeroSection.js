@@ -18,7 +18,7 @@ function HeroSection() {
           GET STARTED
         </Button>
         <Button
-          className='btns'
+          className='btns '
           buttonStyle='btn--primary'
           buttonSize='btn--large'
           onClick={console.log('hey')}
