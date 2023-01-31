@@ -38,11 +38,13 @@ import React from 'react';
 
 function Bookshelf({ selectedBooks, removeBook }) {
 return (
-<div className="container mt-3">
-<h2>Bookshelf</h2>
+<div className="container mt-3 form-control w-100">
+    <>
+<h2 className='text-center fw-bold'>BOOKS ADDED </h2>
+    </>
 <div className="row">
 {selectedBooks.map((book) => (
-<div key={book.id} className="col-md-3">
+<div key={book.id} className="col-md-2">
 <div className="card">
 {book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail && (
 <img src={book.volumeInfo.imageLinks.thumbnail} className="card-img-top img-fluid" alt="..."/>
