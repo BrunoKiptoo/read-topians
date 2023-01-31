@@ -73,3 +73,10 @@
     cursor: pointer;
   }
   
+
+  .row2 {
+    height: 200px;
+    display: flex;
+    align-items: center;
+  }
+  

@@ -45,58 +45,6 @@ function Search() {
   };
 
 
-//   return (
-//     <div className=''>
-//     <div class="container-fluid">
-//       <form onSubmit={handleSearch} className="col-12 text-center  ">
-      
-//         <div className="form-group">
-//         <input
-//           className="container mt-5 form-control w-100 text-center "
-//           type="search"
-//           placeholder="Search for books"
-//           aria-label="Search"
-//           value={query}
-//           onChange={e => setQuery(e.target.value)}
-//         />
-//         </div>
-        
-//         <div className="form-group  mt-3">
-//           <button className="btn btn-dark" type="submit">Search</button>
-//         </div>
-//       </form>
-
-//       <div className="container-fluid mt-3">
-//         <div className="row ">
-//           {books.map((book, index) => (
-//             <div key={book.id} className={`col-md-2 ${index % 5 === 0 ? 'clearfix' : ''}`}>
-//               <div className="card">
-//                 {book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail && (
-//                     <img src={book.volumeInfo.imageLinks.thumbnail} className="card-img-top img-
-//                     fluid" alt="..."/>
-// )}
-// <div className="card-body ">
-
-// <a href={book.volumeInfo.previewLink} target="_blank">
-// <h5 className="card-title">{book.volumeInfo.title}</h5>
-// </a>
-// {book.volumeInfo.authors && (
-// <p className="card-text">{book.volumeInfo.authors.join(', ')}</p>
-// )}
-// {/* <Link to={'/bookshelf'}></Link> */}
-// <button className="btn btn-outline-success" onClick={() => handleAddToBookshelf(book)}>Add to Bookshelf</button>
-// </div>
-// </div>
-// </div>
-// ))}
-// </div>
-// </div>
-// <Bookshelf selectedBooks={selectedBooks} />
-// </div>
-
-// </div>
-
-// )
 return (
   <div className="cards__container ">
     <div className="container-fluid ">
@@ -118,15 +66,17 @@ return (
           </button>
         </div>
       </form>
+      <Bookshelf selectedBooks={selectedBooks} removeBook={removeBook} />
+      {/* // */}
 
-      <div className="container-fluid mt-3 ">
+      <div className="container-fluid mt-3  ">
         <div className="row" >
           {books.map((book, index) => (
             <div
               key={book.id}
               className={`col-md-2 ${index % 5 === 0 ? 'clearfix' : ''}`}
             >
-              <div className="card ">
+              <div className="card  ">
                 {book.volumeInfo.imageLinks &&
                   book.volumeInfo.imageLinks.thumbnail && (
                     <img
@@ -161,7 +111,7 @@ return (
       </div>
     </div>
 
-    <Bookshelf selectedBooks={selectedBooks} removeBook={removeBook} />
+   
   </div>
 )
 };
